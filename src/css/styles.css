@@ -1,0 +1,212 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #FF9800;
+  --background-dark: #333;
+  --background-light: #fff;
+  --text-dark: #000;
+  --text-light: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--background-light);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .main-content {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  main {
+    order: 1;
+    flex: 2;
+  }
+}
+
+.header {
+  background: var(--background-dark);
+  color: var(--text-light);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo span {
+  color: var(--secondary-color);
+}
+
+.navbar {
+  margin-top: 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-light);
+  background: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.navbar a:hover, .navbar .active {
+  background-color: #219653; /* Darker green on hover/active */
+}
+
+.main-content {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.content {
+  flex: 2;
+  margin-left: 2rem; /* Add this line to move content to the right */
+}
+
+.article {
+  margin-bottom: 2rem;
+  text-align: justify; /* Add this line to align text */
+}
+
+.article h2 {
+  color: var(--primary-color);
+}
+
+.article img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.sidebar {
+  flex: 1;
+  background: var(--background-light);
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  color: #bdc3c7; /* Light gray for sidebar text */
+}
+
+.sidebar li small {
+  color: #ecf0f1; /* Light gray for small text */
+}
+
+.sidebar a {
+  color: #bdc3c7; /* Light gray links */
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #ecf0f1; /* Change color on hover */
+}
+
+.footer {
+  background: var(--background-dark);
+  color: var(--text-light);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-section {
+  margin-bottom: 1rem;
+}
+
+.gallery img {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Adjusting for padding and border */
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #27ae60; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #219653; /* Darker green on hover */
+}
